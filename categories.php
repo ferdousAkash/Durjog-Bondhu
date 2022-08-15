@@ -3,6 +3,8 @@
 
 
     <!-- CAtegories Section Starts Here -->
+
+    <!-- <span></span> -->
     <section class="categories">
         <div class="container">
             <h2 class="text-center">Explore Foods</h2>
