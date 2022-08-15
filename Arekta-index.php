@@ -17,7 +17,8 @@
     <section class="categories">
         <div class="container">
             <h2 class="text-center">Explore Foods</h2>
-
+            <!-- <p></p> -->
+            <!-- <span></span> -->
             <?php 
                 //Create SQL< Query to display categories from database
                 $sql= "SELECT * FROM tbl_catagory";//ekhane  "SELECT * FROM tbl_catagory LIMIT 4" likhle 4 ta show korbe // "SELECT * FROM tbl_catagory WHERE active='Yes' AND featured='Yes' " likhle shudhu featured and active tae show korbe
