@@ -1,5 +1,8 @@
 <?php include('partials-front/menu.php'); ?>
 
+    
+
+
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
@@ -36,7 +39,7 @@
                         $title= $row['title'];
                         $image_name = $row['image_name'];
                         ?>
-                            <a href="category-foods.html">
+                            <a href="<?php echo SITEURL; ?>category-foods.php?catagory_id=?<?php echo $id ?>  "> <!-- ekhane category gulo ke ada korechi id diye !-->
                                 <div class="box-3 float-container">
                                     <?php
                                         //Check whether image available or not
