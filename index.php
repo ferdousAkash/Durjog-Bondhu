@@ -129,12 +129,12 @@
                             if($image_name== "")
                             {
                                 //not available
-                                echo "<div class='error'>Image not available</div>"
+                                echo "<div class='error'>Image not available</div>";
                             }
                             else{
                                 //available
                                 ?>
-                                <img src="<?php SITEURL; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                                 <?php
                             }
                         ?>
@@ -143,7 +143,7 @@
 
                     <div class="food-menu-desc">
                         <h4><?php echo $title; ?></h4>
-                        <p class="food-price">$<?php echo $price; ?></p>
+                        <p class="food-price">৳<?php echo $price; ?></p>
                         <p class="food-detail">
                             <?php echo $description; ?>
                         </p>

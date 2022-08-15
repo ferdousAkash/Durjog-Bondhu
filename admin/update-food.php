@@ -20,7 +20,7 @@
         $description = $row2['description'];
         $price = $row2['price'];
         $current_image = $row2['image_name'];
-        $current_category = $row2['category_id'];
+        $current_category = $row2['catagory_id'];
         $featured = $row2['featured'];
         $active = $row2['active'];
 
@@ -171,7 +171,7 @@
                 $description = $_POST['description'];
                 $price = $_POST['price'];
                 $current_image = $_POST['current_image'];
-                $category = $_POST['category'];
+                $category = $_POST['catagory_id'];
 
                 $featured = $_POST['featured'];
                 $active = $_POST['active'];
@@ -250,9 +250,9 @@
                 $sql3 = "UPDATE tbl_food SET 
                     title = '$title',
                     description = '$description',
-                    price = $price,
+                    price = '$price',
                     image_name = '$image_name',
-                    category_id = '$category',
+                    catagory_id = '$category',
                     featured = '$featured',
                     active = '$active'
                     WHERE id=$id
