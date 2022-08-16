@@ -16,6 +16,14 @@
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
 
+    <?php
+        if(isset($_SESSION['order']))
+        {
+            echo $_SESSION['order'];
+            unset($_SESSION['order']);
+        }
+    ?>
+
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
         <div class="container">
@@ -90,37 +98,37 @@
             <h2 class="text-center">Food Menu</h2>
 
             <?php
-            //Getting fooods from database that are active and fetured
-            $sql2= "SELECT * FROM tbl_food WHERE active='Yes' AND featured= 'Yes' LIMIT 6";
-            //Execute the qery
-            $res2= mysqli_query($conn, $sql2);
+                //Getting fooods from database that are active and fetured
+                $sql2= "SELECT * FROM tbl_food WHERE active='Yes'";
+                //Execute the qery
+                $res2= mysqli_query($conn, $sql2);
 
-            //Count rows
-            $count2 =mysqli_num_rows($res2);
+                //Count rows
+                $count2 =mysqli_num_rows($res2);
 
-            //Check whether food available or not 
-            if($count2>0)
-            {
-                //available
-                while($row = mysqli_fetch_assoc($res2))
+                //Check whether food available or not 
+                if($count2>0)
                 {
-                    //Get all the values 
-                    $id = $row['id'];
-                    $title = $row['title'];
-                    $price = $row['price'];
-                    $description = $row['description'];
-                    $image_name = $row['image_name'];
-                    ?>
-                    
+                    //available
+                    while($row = mysqli_fetch_assoc($res2))
+                    {
+                        //Get all the values 
+                        $id = $row['id'];
+                        $title = $row['title'];
+                        $price = $row['price'];
+                        $description = $row['description'];
+                        $image_name = $row['image_name'];
+                        ?>
+                        
 
-                    <?php
+                        <?php
+                    }
+
                 }
-
-            }
-            else{
-                //not available
-                echo "<div class='error'>Food not available ! </div>";
-            }
+                else{
+                    //not available
+                    echo "<div class='error'>Food not available ! </div>";
+                }
 
 
             ?>
@@ -152,7 +160,7 @@
                         </p>
                         <br>
 
-                        <a href="order.html" class="btn btn-primary">Order Now</a>
+                        <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a> <!--Alada kore ? er por id likhi karon alada order er jonno alada id thaka uchit
                     </div>
                 </div>
 
