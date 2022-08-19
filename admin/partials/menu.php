@@ -12,6 +12,7 @@
         <title>Food Order Website - Home Page </title>
 
         <link rel = "stylesheet" href="../css/admin.css">
+        <link rel = "stylesheet" href="../css/styles.css">
     </head>
     <body>
         <!-- Menu Section Starts -->

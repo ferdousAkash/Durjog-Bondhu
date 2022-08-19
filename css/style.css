@@ -41,11 +41,11 @@
 }
 
 a{
-    color: #ff6b81;
+    color: #74b9ff;
     text-decoration: none;
 }
 a:hover{
-    color: #ff4757;
+    color: #74b9ff;
 }
 
 .btn{
@@ -110,7 +110,15 @@ fieldset{
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/floof-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.food-orderbg{
+    background-image: url(../images/FLOOD-BG.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -199,7 +207,10 @@ fieldset{
     margin-bottom: 1%; 
     font-weight: bold;
 }
-
+.order-confirm{
+    color: #ff4757;
+    font-family: "Copperplate";
+}
 
 
 /* CSS for Mobile Size or Smaller Screen */

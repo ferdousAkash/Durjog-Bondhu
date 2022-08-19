@@ -36,9 +36,9 @@
     }
 
     ?>
-
+    
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search">
+    <section class="food-orderbg">
         <div class="container">
             
             <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
@@ -145,13 +145,16 @@
                     if($res2==true)
                     {
                         //Query executed and order saved
-                        $_SESSION['order'] = "<div class= 'success'>----Order placed!---- </div> ";
+                       
+                        $_SESSION['order'] = "<div class='order-confirm text-center bold'><br> <br>----Order placed !---- <br> Please keep patience.<br> It wont take more than 10-12 hours </div>  ";
                         //Redirecct home
                         header('location:'.SITEURL);
                     }
                     else{
                         //failed to save order
-                        $_SESSION['order'] = "<div class= 'error'>----Failed to place the Order! Try again after a while---- </div> ";
+                        
+
+                        $_SESSION['order'] = "<div class= 'error text-center'>----Failed to place the Order! Try again after a while---- </div> ";
                         //Redirecct home
                         header('location:'.SITEURL);
 

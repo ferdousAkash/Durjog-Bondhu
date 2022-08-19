@@ -65,6 +65,10 @@ table tr td{
 .error{
     color: #ff4757;
 }
+.order-confirm{
+    color: #ff4757;
+    font-family: "Copperplate";
+}
 
 .btn-secondary{
     background-color:#7bed9f;

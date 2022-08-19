@@ -47,7 +47,7 @@
                         $title= $row['title'];
                         $image_name = $row['image_name'];
                         ?>
-                            <a href="<?php echo SITEURL; ?>category-foods.php?catagory_id=?<?php echo $id ?>  "> <!-- ekhane category gulo ke ada korechi id diye !-->
+                            <a href="<?php echo SITEURL; ?>category-foods.php?catagory_id=?<?php echo $id ?>  "> 
                                 <div class="box-3 float-container">
                                     <?php
                                         //Check whether image available or not
@@ -160,7 +160,7 @@
                         </p>
                         <br>
 
-                        <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a> <!--Alada kore ? er por id likhi karon alada order er jonno alada id thaka uchit
+                        <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a> <!--Alada kore ? er por id likhi karon alada order er jonno alada id thaka uchit--->
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@
         </div>
 
         <p class="text-center">
-            <a href="#">See All Foods</a>
+            <a href="<?php SITEURL;?>foods.php">See All Foods</a>
         </p>
     </section>
     <!-- fOOD Menu Section Ends Here -->
