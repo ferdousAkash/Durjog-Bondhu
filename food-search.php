@@ -1,5 +1,5 @@
     <?php include('partials-front/menu.php'); ?>
-
+    <link rel="stylesheet" href="styles.css">
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">

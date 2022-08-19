@@ -28,7 +28,7 @@
 
 
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search text-center">
+    <section class="product-search text-center">
         <div class="container">
             
             <h2>Foods on <a href="#" class="text-white">"Category"</a></h2>

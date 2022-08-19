@@ -93,7 +93,6 @@
                             //redirect to manage admin with error message
                             $_SESSION['change-pwd'] = "<div class='success'>Password changed sucessfully !! </div>";
                             //Redirect the user 
-                            
                             header('location:' .SITEURL . 'admin/manage-admin.php');
 
                         }

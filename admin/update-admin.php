@@ -97,14 +97,15 @@
                 //Query to execute and Admin Updated
                 $_SESSION['update'] = "<div class= 'success' >Admin updated successfully</div>";
                 //redirect to Manage Admin page
-                header('location'. SITEURL. 'admin/manage-admin.php');
+                header('location:' .SITEURL . 'admin/manage-admin.php');
             }
             else{
                 //Failed to Update Admin
                 $_SESSION['update'] = "<div class= 'error' >Failed to delete admin!! </div>";
                 //redirect to Manage Admin page
-                header('location'. SITEURL. 'admin/manage-admin.php');
+                header('location:' .SITEURL . 'admin/manage-admin.php');
             }
+            
 
         }
 

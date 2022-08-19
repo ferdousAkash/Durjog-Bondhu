@@ -4,10 +4,10 @@
 
 
     <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search text-center">
+    <section class="product-search text-center">
         <div class="container">
             
-            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
+            <form action="<?php echo SITEURL; ?>product-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
@@ -99,7 +99,7 @@
 
             <?php
                 //Getting fooods from database that are active and fetured
-                $sql2= "SELECT * FROM tbl_food WHERE active='Yes'";
+                $sql2 = "SELECT * FROM tbl_food WHERE active='Yes' AND featured='Yes' LIMIT 8";
                 //Execute the qery
                 $res2= mysqli_query($conn, $sql2);
 
@@ -119,7 +119,37 @@
                         $description = $row['description'];
                         $image_name = $row['image_name'];
                         ?>
-                        
+
+                            <div class="food-menu-box">
+                            <div class="food-menu-img">
+                                <?php
+                                    //check image available or not
+                                    if($image_name== "")
+                                    {
+                                        //not available
+                                        echo "<div class='error'>Image not available</div>";
+                                    }
+                                    else{
+                                        //available
+                                        ?>
+                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                        <?php
+                                    }
+                                ?>
+                                
+                            </div>
+
+                            <div class="food-menu-desc">
+                                <h4><?php echo $title; ?></h4>
+                                <p class="food-price">৳<?php echo $price; ?></p>
+                                <p class="food-detail">
+                                    <?php echo $description; ?>
+                                </p>
+                                <br>
+
+                                <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a> <!--Alada kore ? er por id likhi karon alada order er jonno alada id thaka uchit--->
+                            </div>
+                        </div>
 
                         <?php
                     }
@@ -133,36 +163,7 @@
 
             ?>
 
-                <div class="food-menu-box">
-                    <div class="food-menu-img">
-                        <?php
-                            //check image available or not
-                            if($image_name== "")
-                            {
-                                //not available
-                                echo "<div class='error'>Image not available</div>";
-                            }
-                            else{
-                                //available
-                                ?>
-                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
-                                <?php
-                            }
-                        ?>
-                        
-                    </div>
-
-                    <div class="food-menu-desc">
-                        <h4><?php echo $title; ?></h4>
-                        <p class="food-price">৳<?php echo $price; ?></p>
-                        <p class="food-detail">
-                            <?php echo $description; ?>
-                        </p>
-                        <br>
-
-                        <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a> <!--Alada kore ? er por id likhi karon alada order er jonno alada id thaka uchit--->
-                    </div>
-                </div>
+                
 
 
 
