@@ -3,18 +3,18 @@
     
 
 
-    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- Product sEARCH Section Starts Here -->
     <section class="product-search text-center">
         <div class="container">
             
             <form action="<?php echo SITEURL; ?>product-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="search" name="search" placeholder="Search for your desired product.." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
 
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+    <!--Product sEARCH Section Ends Here -->
 
     <?php
         if(isset($_SESSION['order']))
@@ -27,27 +27,27 @@
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
         <div class="container">
-            <h2 class="text-center">Explore Foods</h2>
+            <h2 class="text-center">Explore Products</h2>
 
             <?php 
                 //Create SQL< Query to display categories from database
                 $sql= "SELECT * FROM tbl_catagory";
                 //Execute query
-                $res = mysqli_query($conn, $sql);
+                $query = mysqli_query($conn, $sql);
                 //Count rows to check wwhether the category is available or not
-                $count = mysqli_num_rows($res);
+                $count = mysqli_num_rows($query);
                 
                 if($count > 0 )
                 {
                     //categories available
-                    while($row= mysqli_fetch_assoc($res))
+                    while($row= mysqli_fetch_assoc($query))
                     {
                         //Get the values like title, image_name and ID
                         $id =$row['id'];
                         $title= $row['title'];
                         $image_name = $row['image_name'];
                         ?>
-                            <a href="<?php echo SITEURL; ?>category-foods.php?catagory_id=?<?php echo $id ?>  "> 
+                            <a href="<?php echo ORDERURL; ?>  "> 
                                 <div class="box-3 float-container">
                                     <?php
                                         //Check whether image available or not
@@ -59,7 +59,7 @@
                                             //available
                                             ?>
 
-                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>"  class="img-responsive img-curve">
                                             <?php
                                         }
                                     ?>
@@ -92,13 +92,13 @@
 
 
 
-    <!-- fOOD MEnu Section Starts Here -->
-    <section class="food-menu">
+    <!-- Product MEnu Section Starts Here -->
+    <section class="product-menu">
         <div class="container">
-            <h2 class="text-center">Food Menu</h2>
+            <h2 class="text-center">Product List</h2>
 
             <?php
-                //Getting fooods from database that are active and fetured
+                //Getting products from database that are active and fetured
                 $sql2 = "SELECT * FROM tbl_food WHERE active='Yes' AND featured='Yes' LIMIT 8";
                 //Execute the qery
                 $res2= mysqli_query($conn, $sql2);
@@ -106,7 +106,7 @@
                 //Count rows
                 $count2 =mysqli_num_rows($res2);
 
-                //Check whether food available or not 
+                //Check whether products available or not 
                 if($count2>0)
                 {
                     //available
@@ -120,8 +120,8 @@
                         $image_name = $row['image_name'];
                         ?>
 
-                            <div class="food-menu-box">
-                            <div class="food-menu-img">
+                            <div class="product-menu-box">
+                            <div class="product-menu-img">
                                 <?php
                                     //check image available or not
                                     if($image_name== "")
@@ -132,17 +132,17 @@
                                     else{
                                         //available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>"  class="img-responsive img-curve">
                                         <?php
                                     }
                                 ?>
                                 
                             </div>
 
-                            <div class="food-menu-desc">
+                            <div class="product-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="food-price">৳<?php echo $price; ?></p>
-                                <p class="food-detail">
+                                <p class="product-price">৳<?php echo $price; ?></p>
+                                <p class="product-detail">
                                     <?php echo $description; ?>
                                 </p>
                                 <br>
@@ -157,7 +157,7 @@
                 }
                 else{
                     //not available
-                    echo "<div class='error'>Food not available ! </div>";
+                    echo "<div class='error'>Productnot available ! </div>";
                 }
 
 
@@ -174,9 +174,9 @@
         </div>
 
         <p class="text-center">
-            <a href="<?php SITEURL;?>foods.php">See All Foods</a>
+            <a href="<?php SITEURL;?>products.php">See All products</a>
         </p>
     </section>
-    <!-- fOOD Menu Section Ends Here -->
+    <!-- Product Menu Section Ends Here -->
 
     <?php include('partials-front/footer.php'); ?>

@@ -35,10 +35,10 @@
                         <a href="<?php echo SITEURL ;?>categories.php">Categories</a>
                     </li>
                     <li>
-                        <a href="<?php echo SITEURL ;?>foods.php">Foods</a>
+                        <a href="<?php echo SITEURL ;?>products.php">Products</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="<?php echo SITEURL ;?>contacts.php">Contact</a>
                     </li>
                 </ul>
             </div>

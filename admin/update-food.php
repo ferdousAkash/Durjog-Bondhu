@@ -212,6 +212,7 @@
                             //Stop the Process
                             die();
                         }
+                        
                         //3. Remove the image if new image is uploaded and current image exists
                         //B. Remove current Image if Available
                         if($current_image!="")

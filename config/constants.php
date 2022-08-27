@@ -5,6 +5,8 @@
 
 
     //create Constants to Store Non Repeating Values
+    define('ORDERURL', 'http://localhost/prj/products.php');
+
     define('SITEURL', 'http://localhost/prj/');
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'root');

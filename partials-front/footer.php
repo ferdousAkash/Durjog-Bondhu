@@ -19,7 +19,7 @@
     <!-- footer Section Starts Here -->
     <section class="footer">
         <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Akash Hossain</a></p>
+            <p>All rights reserved. Designed By <a href="#">Akash Hossain, Afsara Afrose Orna & Najmus Sakib</a></p>
         </div>
     </section>
     <!-- footer Section Ends Here --> 

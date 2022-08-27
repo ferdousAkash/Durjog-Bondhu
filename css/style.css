@@ -1,10 +1,5 @@
-/* 
-    Author: Vijay Thapa;
-    Theme: Restaurant Food Order;
-    version: 1.0;
-*/
 
-/* CSS for All */
+/* CSS   */
 *{
     margin: 0 0;
     padding: 0 0;
@@ -110,15 +105,15 @@ fieldset{
 /* CSS for Food SEarch Section */
 
 .product-search{
-    background-image: url(../images/floof-bg.jpg);
+    background-image: url(../images/flood-bg2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 7% 0;
 }
 
-.food-orderbg{
-    background-image: url(../images/FLOOD-BG.jpg);
+.product-orderbg{
+    background-image: url(../images/flood-bg2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -147,11 +142,11 @@ fieldset{
 
 
 /* CSS for Food Menu */
-.food-menu{
+.product-menu{
     background-color: #ececec;
     padding: 4% 0;
 }
-.food-menu-box{
+.product-menu-box{
     width: 43%;
     margin: 1%;
     padding: 2%;
@@ -160,22 +155,22 @@ fieldset{
     border-radius: 15px;
 }
 
-.food-menu-img{
+.product-menu-img{
     width: 20%;
     float: left;
 }
 
-.food-menu-desc{
+.product-menu-desc{
     width: 70%;
     float: left;
     margin-left: 8%;
 }
 
-.food-price{
+.product-price{
     font-size: 1.2rem;
     margin: 2% 0;
 }
-.food-detail{
+.product-detail{
     font-size: 1rem;
     color: #747d8c;
 }
@@ -252,11 +247,11 @@ fieldset{
         margin: 4% auto;
     }
 
-    .food-menu{
+    .product-menu{
         padding: 20% 0;
     }
 
-    .food-menu-box{
+    .product-menu-box{
         width: 90%;
         padding: 5%;
         margin-bottom: 5%;

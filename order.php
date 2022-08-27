@@ -1,13 +1,13 @@
 <?php include('partials-front/menu.php'); ?>
 
     <?php
-    //Check food is set or not jate kew random id use kore  access na pay   
+    //Check Product is set or not jate kew random id use kore  access na pay   
     if(isset($_GET['food_id']))
     {
-        //Get food id and detail of selected food
+        //Get Product id and detail of selected Product
         $food_id = $_GET['food_id'];
 
-        //Geting details of the selected food
+        //Geting details of the selected Product
         $sql = "SELECT * FROM tbl_food WHERE id=$food_id";
         //Execute the query
         $res = mysqli_query($conn, $sql);
@@ -37,17 +37,17 @@
 
     ?>
     
-    <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-orderbg">
+    <!-- Product sEARCH Section Starts Here -->
+    <section class="product-orderbg">
         <div class="container">
             
-            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+            <h2 class="text-center text-#1e90ff">Fill this form to confirm your order.</h2>
 
             <form action="" method="POST" class="order">
                 <fieldset>
-                    <legend>Selected Food</legend>
+                    <legend>Selected Product</legend>
 
-                    <div class="food-menu-img">
+                    <div class="product-menu-img">
                         <?php
                             //Check image avaiilable or not
                             if($image_name== "")
@@ -58,7 +58,7 @@
                             else{
                                 //Image available
                                 ?>
-                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>"  class="img-responsive img-curve">
 
 
                                 <?php
@@ -68,11 +68,11 @@
                         
                     </div>
     
-                    <div class="food-menu-desc">
+                    <div class="product-menu-desc">
                         <h3><?php echo $title;?></h3>
                         <input type="hidden" name = "food" value ="<?php echo $title ; ?>">;
 
-                        <p class="food-price">৳<?php echo $price;?></p>
+                        <p class="product-price">৳<?php echo $price;?></p>
                         <input type="hidden" name= "price" value = "<?php echo $price?>">;
 
                         <div class="order-label">Quantity</div>
@@ -90,8 +90,8 @@
                     <div class="order-label">Phone Number</div>
                     <input type="tel" name="contact" placeholder="E.g. 015xxxxxxx" class="input-responsive" required>
 
-                    <div class="order-label">Email</div>
-                    <input type="email" name="email" placeholder="E.g. afsara@mail.com" class="input-responsive" required>
+                    <div class="order-label">National ID</div>
+                    <input type="NID" name="NID" placeholder="E.g. 78953xxxxx" class="input-responsive" required>
 
                     <div class="order-label">Address</div>
                     <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
@@ -118,7 +118,7 @@
 
                     $customer_name =$_POST['full-name'];
                     $customer_contact = $_POST['contact'];
-                    $customer_email = $_POST['email'];
+                    $customer_email = $_POST['NID'];
                     $customer_address = $_POST['address'];
 
 
@@ -133,7 +133,10 @@
                         status = '$status', 
                         customer_name = '$customer_name',
                         customer_contact ='$customer_contact',
+                        customer_email ='$customer_email',
+
                         customer_address ='$customer_address'
+
                     ";
 
                     //echo $sql2 ; die ();
@@ -164,6 +167,6 @@
 
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+    <!-- Product sEARCH Section Ends Here -->
 
     <?php include('partials-front/footer.php'); ?>

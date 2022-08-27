@@ -22,7 +22,7 @@
                     <li> <a href="index.php"> HOME </a></li>
                     <li> <a href="manage-admin.php"> admin </a></li>
                     <li> <a href="manage-category.php"> CATAGORY </a></li>
-                    <li> <a href="manage-food.php"> FOOD </a></li>
+                    <li> <a href="manage-food.php"> PRODUCTS </a></li>
                     <li> <a href="manage-order.php"> ORDER </a></li>
                     <li> <a href="logout.php"> Logout </a></li>
 
